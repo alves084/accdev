@@ -728,7 +728,7 @@ footer .footer{
         max-width: 580px;
     }
     footer{
-        height: 400px;
+        height: 450px;
     }
     footer .footer{
         flex-direction: column;
@@ -839,7 +839,7 @@ footer .footer{
         width: auto;
     }
     footer{
-        height: 400px;
+        height: 450px;
     }
     footer .footer{
         flex-direction: column;
