@@ -628,7 +628,7 @@ footer .footer{
     display: flex;
 }
 .footer1{
-    width: 300px;
+    width: 330px;
     color: #fff;
     margin: auto;
 }
@@ -645,7 +645,7 @@ footer .footer{
 .footer1 h3{
     color: #555;
     font-weight: 500;
-    width: 400px;
+    width: 330px;
     margin-top: -50px;
 }
 .footer1.input{display: flex;
@@ -654,7 +654,7 @@ footer .footer{
     align-items: center;
     margin: auto;
     height: 150px;
-    width: 370px;
+    width: 330px;
     background-color: #333;
 }
 .footer1.input input{
