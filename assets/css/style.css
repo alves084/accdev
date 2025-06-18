@@ -206,10 +206,6 @@ header{
     margin: auto;
     color: #077aa1;
 }
-.default.light{
-    width: 330px;
-    margin: auto;
-}
 .default.light .section-title,
 .default.light .section-body{
     color: #000;
@@ -828,6 +824,9 @@ footer .footer{
     }
     .default .section-title{
         margin-top: -30px;
+    }
+    .default.light.one{
+        width: 330px;
     }
     .section-somefacts, .section-price{
         flex-wrap: wrap;
