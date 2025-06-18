@@ -207,7 +207,8 @@ header{
     color: #077aa1;
 }
 .default.light{
-    background-color: #f7f7f7;
+    width: 330px;
+    margin: auto;
 }
 .default.light .section-title,
 .default.light .section-body{
