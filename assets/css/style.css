@@ -211,7 +211,7 @@ header{
     color: #000;
 }
 .default.dark{
-    background-color: #000;
+    background-color: #00688e;
 }
 .default.dark .section-title,
 .default.dark .section-body{
@@ -315,11 +315,11 @@ header{
 .section-service{
     flex: 1;
     text-align: center;
-    border-left: 1px solid #333;
+    border-left: 1px solid #032979;
     padding: 10px;
 }
 .section-service:last-child{
-    border-right: 1px solid #333;
+    border-right: 1px solid #032979;
 }
 .section-service h4{
     margin-top: 20px;
@@ -453,14 +453,14 @@ header{
 .section-team-area .pointers{
     height: 15px;
     width: 15px;
-    border: 2px solid #B28756;
+    border: 2px solid #00688e;
     border-radius: 8px;
     margin-left: 5px;
     margin-right: 5px;
     cursor: pointer;
 }
 .section-team-area .pointers.active{
-    background-color: #B28756;
+    background-color: #00688e;
 
 }
 
@@ -529,14 +529,14 @@ header{
 .pointer .pointers{
     height: 15px;
     width: 15px;
-    border: 2px solid #B28756;
+    border: 2px solid #00688e;
     border-radius: 8px;
     margin-left: 5px;
     margin-right: 5px;
     cursor: pointer;
 }
 .pointer .pointers.active{
-    background-color: #B28756;
+    background-color: #00688e;
 }
 .container{
     display: flex;
@@ -630,7 +630,7 @@ footer .footer{
     margin: auto;
 }
 .footer1 .img{
-    background-color: #333;
+    background-color: #31506c;
     border-radius: 30px;
     padding: 7px;
     text-align: center;
@@ -640,10 +640,10 @@ footer .footer{
     margin-top: -80px;
 }
 .footer1 h3{
-    color: #555;
+    color: #fff;
     font-weight: 500;
     width: 330px;
-    margin-top: -50px;
+    margin-top: -30px;
 }
 .footer1.input{display: flex;
     flex-direction: column;
@@ -652,12 +652,12 @@ footer .footer{
     margin: auto;
     height: 150px;
     width: 330px;
-    background-color: #333;
+    background-color: #31506c;
 }
 .footer1.input input{
     width: 300px;
     height: 50px;
-    background-color: #333;
+    background-color: #31506c;
     border: 0;
     border-bottom:1px solid #ccc;
     text-align: center;
