@@ -827,6 +827,7 @@ footer .footer{
     }
     .default.light.one{
         width: 330px;
+        margin: auto;
     }
     .section-somefacts, .section-price{
         flex-wrap: wrap;
