@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             nav.style.display = 'flex';
         }
     });
-    //header srcoll
+    //header scroll
     const header = document.querySelector('.header');
 
     window.addEventListener('scroll', () => {
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (endX < startX - swipeThreshold) {
         // deslizou para a esquerda
-        currentSlide = (currentSlide + 1) % slides.length;
+        currentSlide = (currentSlide + 1) % slides.length;s
         showSlide(currentSlide);
     } else if (endX > startX + swipeThreshold) {
         // deslizou para a direita
