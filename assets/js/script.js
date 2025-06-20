@@ -77,4 +77,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    //splash screen
+    const splash = document.getElementById('splash-screen');
+    const closeBtn = document.getElementById('close-splash');
+
+    closeBtn.addEventListener('click', () => {
+    splash.style.opacity = '0';
+    setTimeout(() => {
+        splash.style.display = 'none';
+    }, 500);
+    });
+
 });
