@@ -671,7 +671,7 @@ footer .footer{
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #00688e8c;
+  background-color: #000000d4;
   color: white;
   display: flex;
   justify-content: center;
@@ -688,12 +688,12 @@ footer .footer{
 
 #close-splash {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -30px;
+  right: 20px;
   background: none;
   color: #fff;
   border: none;
-  font-size: 18px;
+  font-size: 38px;
   width: 30px;
   height: 30px;
   cursor: pointer;
