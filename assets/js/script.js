@@ -88,4 +88,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
     });
 
+    //showSlide
+    let startX = 0;
+    let endX = 0;
+
+    sliderContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    });
+
+    sliderContainer.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+    });
+
+    function handleSwipe() {
+    const swipeThreshold = 50; // mínimo de distância para considerar swipe
+
+    if (endX < startX - swipeThreshold) {
+        // deslizou para a esquerda
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    } else if (endX > startX + swipeThreshold) {
+        // deslizou para a direita
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+    }
+
 });
