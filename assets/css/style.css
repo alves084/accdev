@@ -104,6 +104,8 @@ header{
     transition: margin-left 0.5s ease;
     height: 100%;
     width: calc(100vw * 5);
+    touch-action: pan-y;
+    overflow: hidden;
 }
 .banner .slide{
     width: 100vw;
