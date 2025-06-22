@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showSlide(currentSlide);
     }
 
-    let slideInterval = setInterval(nextSlide, 5000); // troca automática a cada 5s
+    let slideInterval = setInterval(nextSlide, 10000); // troca automática a cada 5s
 
     // Pausa ao passar o mouse
     sliderContainer.addEventListener('mouseenter', () => {
