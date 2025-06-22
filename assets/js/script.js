@@ -90,32 +90,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //showSlide
     let startX = 0;
+    let startY = 0;
     let endX = 0;
+    let endY = 0;
 
     sliderContainer.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
     }, { passive: true });
 
-    sliderContainer.addEventListener('touchmove', (e) => {
-        e.preventDefault(); // evita rolagem lateral no mobile
-    }, { passive: false });
-
     sliderContainer.addEventListener('touchend', (e) => {
-        endX = e.changedTouches[0].clientX;
-        handleSwipe();
+    endX = e.changedTouches[0].clientX;
+    endY = e.changedTouches[0].clientY;
+    handleSwipe();
     });
 
     function handleSwipe() {
-        const swipeThreshold = 50;
+    const swipeThreshold = 50;
+    const diffX = endX - startX;
+    const diffY = endY - startY;
 
-        if (endX < startX - swipeThreshold) {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        } else if (endX > startX + swipeThreshold) {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        // movimento horizontal
+        if (diffX < -swipeThreshold) {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+        } else if (diffX > swipeThreshold) {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
         }
     }
+    }
+
 
 
 });
