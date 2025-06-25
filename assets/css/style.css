@@ -296,10 +296,12 @@ header{
 .section-aboutus--left p{
     line-height: 27px;
     font-size: 15px;
+    text-align: justify;
 }
 .section-aboutus--right{
     width: 500px;
     text-align: center;
+    margin-left: 10px;
 }
 .section-aboutus--right img{
     width: 480px;
