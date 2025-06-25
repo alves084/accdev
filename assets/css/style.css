@@ -85,19 +85,13 @@ header{
     overflow: hidden;
 }
 .banner .slide:nth-child(1) {
-    background-image: url('../banners/CAPA-MATRICULAS-ACC.jpg');
-}
-.banner .slide:nth-child(2) {
     background-image: url('../banners/CAPA-01.jpg');
 }
-.banner .slide:nth-child(3) {
+.banner .slide:nth-child(2) {
     background-image: url('../banners/CAPA-02-ACC.jpg');
 }
-.banner .slide:nth-child(4) {
+.banner .slide:nth-child(3) {
     background-image: url('../banners/CAPA-03-ACC.jpg');
-}
-.banner .slide:nth-child(5) {
-    background-image: url('../banners/FAESC-Cards-ACC-01-Horizontal.jpg');
 }
 .banner .sliders{
     display: flex;
