@@ -313,11 +313,11 @@ header{
 .section-service{
     flex: 1;
     text-align: center;
-    border-left: 1px solid #032979;
+    border-left: 1px solid #c28e5c;
     padding: 10px;
 }
 .section-service:last-child{
-    border-right: 1px solid #032979;
+    border-right: 1px solid #c28e5c;
 }
 .section-service h4{
     margin-top: 20px;
