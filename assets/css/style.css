@@ -858,6 +858,12 @@ footer .footer{
     .section-service:first-child{
         border-left: 0;
     }
+    .section-service{
+        border-left: 0;
+    }
+    .section-service:last-child{
+        border-right: 0;
+    }
     .section-projects--filters{
         margin-left: 30px;
         margin-right: 30px;
