@@ -85,7 +85,7 @@ header{
     overflow: hidden;
 }
 .banner .slide:nth-child(1) {
-    background-image: url('../banners/CAPA-01.jpg');
+    background-image: url('../banners/CAPA-01-ACC.jpg');
 }
 .banner .slide:nth-child(2) {
     background-image: url('../banners/CAPA-02-ACC.jpg');
@@ -97,7 +97,7 @@ header{
     display: flex;
     transition: margin-left 0.5s ease;
     height: 100%;
-    width: calc(100vw * 5);
+    width: calc(100vw * 3);
     touch-action: pan-y;
     overflow: hidden;
 }
