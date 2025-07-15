@@ -823,6 +823,16 @@ footer .footer{
         border-bottom: 1px solid #ccc;
         color: #149dc6;
     }
+    .banner .slide:nth-child(1) {
+        background-image: url('../banners/CAPA-01-ACC-MOBILE.jpg');
+    }
+    .banner .slide:nth-child(2) {
+        background-image: url('../banners/CAPA-02-ACC-MOBILE.jpg');
+        background-position: right;
+    }
+    .banner .slide:nth-child(3) {
+        background-image: url('../banners/CAPA-03-ACC-MOBILE.jpg');
+    }
     .banner h1{
         font-size: 30px;
     }
