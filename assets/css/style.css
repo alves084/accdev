@@ -24,9 +24,9 @@ header{
     color: #fff;
 }
 .header{
-    padding: 0 200px;
+    padding: 0 170px;
     max-width: 100%;
-    height: 100px;
+    height: 150px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -40,8 +40,12 @@ header{
     width: 100px;
 }
 .logoimg img{
-    height: 70px;
-    width: 160px;
+    height: 100px;
+    width: 230px;
+}
+nav{
+    padding: 8px;
+    padding-right: 50px;
 }
 .menu-opener {
     display: none;
@@ -55,7 +59,7 @@ header{
 .menu{
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
 }
 .menu ul,
 .menu li{
@@ -69,15 +73,38 @@ header{
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     align-items: center;
+    font-size: 18px;
 }
 .menu li a:hover,
 .menu .active a{
-    color: #149dc6;
+    color: #8d8d8d;
+}
+.buttonhd{
+    padding: 8px 30px;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    display: inline-block;
+    font-weight: 600;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.buttonhd:hover{
+    background-color: #fff;
+    color: #000;
+    transition: all 0.5s ease-out 0s;
+}
+.btn-mobile-only {
+  display: none;
+}
+.btn-desktop-only {
+  display: inline-block;
 }
 .banner{
     background-color: #3578b1;
@@ -668,8 +695,8 @@ footer .footer{
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   z-index: 999;
   background-color: #25d366;
   border-radius: 50%;
@@ -770,6 +797,14 @@ footer .footer{
         border-bottom: 1px solid #ccc;
         color: #00688e;
     }
+    .btn-mobile-only {
+    display: block;
+    margin-top: 15px;
+    }
+
+    .btn-desktop-only {
+        display: none;
+    }
     .slider-arrows{
         display: none;
     }
@@ -848,6 +883,14 @@ footer .footer{
         border: 0;
         border-bottom: 1px solid #ccc;
         color: #149dc6;
+    }
+    .btn-mobile-only {
+    display: block;
+    margin-top: 15px;
+    }
+
+    .btn-desktop-only {
+        display: none;
     }
     .banner .slide:nth-child(1) {
         background-image: url('../banners/CAPA-01-ACC-MOBILE.png');
