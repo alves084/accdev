@@ -956,18 +956,15 @@ footer .footer{
     .btn-desktop-only {
         display: none;
     }
-    .slide .slidearea img{
-        display: none;
-    }
     .banner .slide:nth-child(1) {
-        background-image: url('../banners/CAPA-01-ACC-MOBILE.png');
+        background-image: url('../banners/1\ -\ mobile.png');
     }
     .banner .slide:nth-child(2) {
-        background-image: url('../banners/CAPA-02-ACC-MOBILE.jpg');
+        background-image: url('../banners/2\ -\ mobile.png');
         background-position: right;
     }
     .banner .slide:nth-child(3) {
-        background-image: url('../banners/CAPA-03-ACC-MOBILE.png');
+        background-image: url('../banners/3\ -\ mobile.png');
     }
     .banner h1{
         font-size: 30px;
