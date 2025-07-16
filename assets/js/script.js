@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
   const splash = document.getElementById("splash-screen");
   const closeBtn = document.getElementById("close-splash");
+  const menuButton = document.querySelector('.menu-opener');
+  const menu = document.querySelector('.menu');
 
   // --- SLIDER ---
   const setSliderWidth = () => {
@@ -104,4 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   };
+  menuButton.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
+
 });
