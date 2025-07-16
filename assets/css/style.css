@@ -24,7 +24,7 @@ header{
     color: #fff;
 }
 .header{
-    padding: 0 170px;
+    padding: 0px 30px;
     max-width: 100%;
     height: 150px;
     margin: auto;
@@ -45,7 +45,6 @@ header{
 }
 nav{
     padding: 8px;
-    padding-right: 50px;
 }
 .menu-opener {
     display: none;
@@ -59,7 +58,7 @@ nav{
 .menu{
     flex: 1;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 .menu ul,
 .menu li{
@@ -73,8 +72,7 @@ nav{
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 50px;
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -83,47 +81,7 @@ nav{
 .menu .active a{
     color: #8d8d8d;
 }
-.menu nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    position: relative;
-    flex-wrap: wrap;
-}
-.menu nav ul li {
-    position: relative;
-}
-.menu nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-}
-.menu nav ul li .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #00688e;
-    padding: 10px 0;
-    border-radius: 5px;
-    min-width: 200px;
-    z-index: 1000;
-}
-.menu nav ul li .submenu li {
-    padding: 0;
-}
-.menu nav ul li .submenu li a {
-    padding: 10px 20px;
-    white-space: nowrap;
-    color: #fff;
-}
-.menu nav ul li:hover .submenu {
-    display: block;
-}
+
 .buttonhd{
     padding: 8px 30px;
     background: none;
@@ -797,7 +755,19 @@ footer .footer{
   max-width: 80vw;
   margin-bottom: 20px;
 }
+@media (max-width:1025px){
+    .header{
+        padding: 0px 20px;
+    }
+    .menu{
+        justify-content: end;
+    }
+    .menu li a{
+        font-size: 15px;
+        padding-right: 30px;
+    }
 
+}
 
 
 @media (min-width:450px) and (max-width:800px) {
@@ -918,6 +888,10 @@ footer .footer{
     }
     .logo{
         margin-left: 30px;
+    }
+    .logoimg img{
+        height: 70px;
+        width: 170px;
     }
     .menu-opener{
         display: block;
