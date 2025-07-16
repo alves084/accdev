@@ -111,13 +111,13 @@ nav{
     overflow: hidden;
 }
 .banner .slide:nth-child(1) {
-    background-image: url('../banners/CAPA-01-ACC.jpg');
+    background-image: url('../banners/1.png');
 }
 .banner .slide:nth-child(2) {
-    background-image: url('../banners/CAPA-02-ACC.jpg');
+    background-image: url('../banners/3.png');
 }
 .banner .slide:nth-child(3) {
-    background-image: url('../banners/CAPA-03-ACC.jpg');
+    background-image: url('../banners/2.png');
 }
 .banner .sliders{
     display: flex;
@@ -955,6 +955,9 @@ footer .footer{
     }
 
     .btn-desktop-only {
+        display: none;
+    }
+    .slide .slidearea img{
         display: none;
     }
     .banner .slide:nth-child(1) {
