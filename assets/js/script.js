@@ -126,4 +126,38 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+  // --- Submenu com delay no hover (Desktop) ---
+  if (window.innerWidth > 800) {
+  const menuItems = document.querySelectorAll('.menu nav ul > li');
+
+  menuItems.forEach((item) => {
+    const submenu = item.querySelector('.submenu');
+    if (!submenu) return;
+
+    let timeout;
+
+    item.addEventListener('mouseenter', () => {
+      clearTimeout(timeout);
+      submenu.classList.add('show');
+    });
+
+    item.addEventListener('mouseleave', () => {
+      timeout = setTimeout(() => {
+        submenu.classList.remove('show');
+      }, 300);
+    });
+
+    submenu.addEventListener('mouseenter', () => {
+      clearTimeout(timeout);
+    });
+
+    submenu.addEventListener('mouseleave', () => {
+      timeout = setTimeout(() => {
+        submenu.classList.remove('show');
+      }, 300);
+    });
+  });
+}
+
+
 });

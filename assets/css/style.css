@@ -95,6 +95,11 @@ nav{
     padding: 0;
     z-index: 100;
     min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
     
 }
 
@@ -111,6 +116,8 @@ nav{
   color: #000;
   font-size: 14px;
   display: block;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .menu nav ul li .submenu li a:hover {
@@ -121,6 +128,10 @@ nav{
 }
 .menu nav ul li .submenu.show {
   display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 .buttonhd{
     padding: 8px 30px;
