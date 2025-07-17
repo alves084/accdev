@@ -116,22 +116,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const link = item.querySelector("a");
 
   if (submenu && link) {
-    let submenuOpen = false;
-
     link.addEventListener("click", (e) => {
       if (window.innerWidth <= 768) {
-        if (!submenuOpen) {
-          e.preventDefault();
-          submenu.style.display = "block";
-          submenuOpen = true;
+        e.preventDefault(); // Impede que o link seja seguido
+
+        // Alterna o submenu: abre se estiver fechado, fecha se estiver aberto
+        if (submenu.style.display === "block") {
+          submenu.style.display = "none";
         } else {
-          // Segundo clique segue o link normalmente
-          submenuOpen = false;
+          submenu.style.display = "block";
         }
       }
     });
   }
 });
+
 
   // --- Submenu com delay no hover (Desktop) ---
   if (window.innerWidth > 800) {

@@ -110,12 +110,6 @@ nav{
     padding: 0;
     z-index: 100;
     min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    pointer-events: none;
-    
 }
 
 .menu nav ul li:hover .submenu {
@@ -819,6 +813,17 @@ footer .footer{
   width: 480px;
   max-width: 80vw;
   margin-bottom: 20px;
+}
+
+@media(min-width:800px){
+    
+    .menu nav ul li .submenu{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
 }
 @media (max-width:1025px){
     .header{
