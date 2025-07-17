@@ -870,6 +870,9 @@ footer .footer{
     .menu.open nav ul {
         display: flex;
     }
+    .menu nav ul li .submenu{
+        margin-top: 5px;
+    }
     .btn-mobile-only {
     display: block;
     margin-top: 15px;
@@ -983,6 +986,9 @@ footer .footer{
     }
     .menu.open nav ul {
         display: flex;
+    }
+    .menu nav ul li .submenu{
+        margin-top: 5px;
     }
     .btn-mobile-only {
     display: block;
