@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- SLIDER PRINCIPAL ---
   const setSliderWidth = () => {
     sliderContainer.style.width = `${100 * slides.length}vw`;
-  };
+  }
 
   const showSlide = (index) => {
     const slideWidth = window.innerWidth;
@@ -111,21 +111,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --- SUBMENU MOBILE ---
-  document.querySelectorAll('.menu nav ul > li').forEach((item) => {
-    const submenu = item.querySelector('.submenu');
-    if (submenu) {
-      item.addEventListener('click', (e) => {
-        if (window.innerWidth <= 800) {
+  document.querySelectorAll("nav ul li").forEach(item => {
+  const submenu = item.querySelector(".submenu");
+  const link = item.querySelector("a");
+
+  if (submenu && link) {
+    let submenuOpen = false;
+
+    link.addEventListener("click", (e) => {
+      if (window.innerWidth <= 768) {
+        if (!submenuOpen) {
           e.preventDefault();
-          // Fecha todos os submenus abertos
-          document.querySelectorAll('.submenu').forEach((el) => {
-            if (el !== submenu) el.classList.remove('show');
-          });
-          submenu.classList.toggle('show');
+          submenu.style.display = "block";
+          submenuOpen = true;
+        } else {
+          // Segundo clique segue o link normalmente
+          submenuOpen = false;
         }
-      });
-    }
-  });
+      }
+    });
+  }
+});
+
   // --- Submenu com delay no hover (Desktop) ---
   if (window.innerWidth > 800) {
   const menuItems = document.querySelectorAll('.menu nav ul > li');

@@ -14,6 +14,21 @@ body{
     font-size: 13px;
     overflow-x: hidden;
 }
+body.pagina-interna .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #00688e;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+body.pagina-interna .default.dark.bg-team,
+.default.light.Page{
+  margin-top: 150px;
+}
+body.pagina-interna{
+    background-color: #00688e;
+}
 header{
     position: fixed;
     width: 100%;
@@ -489,7 +504,7 @@ nav{
 .section-team-area{
     background-color: rgba(0, 0, 0, 0.8);
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 .section-team{
     overflow: hidden;
@@ -919,6 +934,9 @@ footer .footer{
     .section-team{
         max-width: 580px;
     }
+    .section-team-area{
+    padding-bottom: 50px;
+    }
     footer{
         height: 450px;
     }
@@ -1069,6 +1087,9 @@ footer .footer{
     }
     .section-team{
         max-width: 280px;
+    }
+    .section-team-area{
+    padding-bottom: 50px;
     }
     .section-team--social-1 h4{
         width: 300px;
