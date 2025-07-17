@@ -1,21 +1,21 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-  let currentSlide = 0;
-
+  // --- ELEMENTOS GERAIS ---
   const sliderContainer = document.querySelector(".banner .sliders");
   const slides = document.querySelectorAll(".banner .slide");
   const pointers = document.querySelectorAll(".banner .pointers");
   const leftArrow = document.querySelector(".arrow-left");
   const rightArrow = document.querySelector(".arrow-right");
-  const menuOpener = document.querySelector(".menu-opener");
+  const menuButton = document.querySelector(".menu-opener");
   const nav = document.querySelector("nav");
   const header = document.querySelector(".header");
   const splash = document.getElementById("splash-screen");
   const closeBtn = document.getElementById("close-splash");
-  const menuButton = document.querySelector('.menu-opener');
-  const menu = document.querySelector('.menu');
+  const menu = document.querySelector(".menu");
 
-  // --- SLIDER ---
+  let currentSlide = 0;
+  let slideInterval;
+
+  // --- SLIDER PRINCIPAL ---
   const setSliderWidth = () => {
     sliderContainer.style.width = `${100 * slides.length}vw`;
   };
@@ -34,21 +34,18 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentSlide);
   };
 
+  // Inicialização do slider
   setSliderWidth();
-  let slideInterval = setInterval(nextSlide, 5000);
+  showSlide(currentSlide);
+  slideInterval = setInterval(nextSlide, 5000);
 
+  // Pausar ao passar o mouse
   sliderContainer.addEventListener("mouseenter", () => clearInterval(slideInterval));
   sliderContainer.addEventListener("mouseleave", () => {
     slideInterval = setInterval(nextSlide, 5000);
   });
 
-  pointers.forEach((pointer, i) => {
-    pointer.addEventListener("click", () => {
-      currentSlide = i;
-      showSlide(currentSlide);
-    });
-  });
-
+  // Navegação por setas
   leftArrow?.addEventListener("click", () => {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     showSlide(currentSlide);
@@ -59,25 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentSlide);
   });
 
-  // --- MENU MOBILE ---
-  menuOpener?.addEventListener("click", () => {
-    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  // Pontos de navegação
+  pointers.forEach((pointer, i) => {
+    pointer.addEventListener("click", () => {
+      currentSlide = i;
+      showSlide(currentSlide);
+    });
   });
 
-  // --- HEADER SCROLL ---
-  window.addEventListener("scroll", () => {
-    header.classList.toggle("scrolled", window.scrollY > 50);
-  });
-
-  // --- SPLASH SCREEN ---
-  closeBtn?.addEventListener("click", () => {
-    splash.style.opacity = "0";
-    setTimeout(() => {
-      splash.style.display = "none";
-    }, 500);
-  });
-
-  // --- SWIPE SLIDE (MOBILE) ---
+  // --- SWIPE (Mobile) ---
   let startX = 0, startY = 0, endX = 0, endY = 0;
 
   sliderContainer.addEventListener("touchstart", (e) => {
@@ -98,16 +85,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (Math.abs(diffX) > Math.abs(diffY)) {
       if (diffX < -swipeThreshold) {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
+        nextSlide();
       } else if (diffX > swipeThreshold) {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         showSlide(currentSlide);
       }
     }
   };
-  menuButton.addEventListener('click', () => {
-  menu.classList.toggle('open');
-});
 
+  // --- MENU MOBILE ---
+  menuButton?.addEventListener("click", () => {
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    menu.classList.toggle("open");
+  });
+
+  // --- HEADER SCROLL ---
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  });
+
+  // --- SPLASH SCREEN ---
+  closeBtn?.addEventListener("click", () => {
+    splash.style.opacity = "0";
+    setTimeout(() => splash.style.display = "none", 500);
+  });
+
+  // --- SUBMENU MOBILE ---
+  document.querySelectorAll('.menu nav ul > li').forEach((item) => {
+    const submenu = item.querySelector('.submenu');
+    if (submenu) {
+      item.addEventListener('click', (e) => {
+        if (window.innerWidth <= 800) {
+          e.preventDefault();
+          // Fecha todos os submenus abertos
+          document.querySelectorAll('.submenu').forEach((el) => {
+            if (el !== submenu) el.classList.remove('show');
+          });
+          submenu.classList.toggle('show');
+        }
+      });
+    }
+  });
 });
