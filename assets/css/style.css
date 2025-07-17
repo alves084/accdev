@@ -81,7 +81,41 @@ nav{
 .menu .active a{
     color: #505050;
 }
+.menu nav ul li {
+  position: relative;
+}
 
+.menu nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-top: 50px;
+    left: 0;
+    background-color: #fff;
+    padding: 0;
+    z-index: 100;
+    min-width: 200px;
+    
+}
+
+.menu nav ul li:hover .submenu {
+  display: block;
+}
+
+.menu nav ul li .submenu li {
+  width: 100%;
+}
+
+.menu nav ul li .submenu li a {
+  padding: 10px 20px;
+  color: #000;
+  font-size: 14px;
+  display: block;
+}
+
+.menu nav ul li .submenu li a:hover {
+  background-color: #0d8bb3;
+}
 .buttonhd{
     padding: 8px 30px;
     background: none;
@@ -787,7 +821,7 @@ footer .footer{
         z-index: 99;
         background-color: #fff;
         width: 100vw;
-        top: 100px;
+        top: 140px;
         right: 0;
     }
     .menu ul {
@@ -810,7 +844,6 @@ footer .footer{
     .menu nav ul {
         flex-direction: column;
         align-items: flex-start;
-        background-color: #00688e;
         display: none;
         width: 100%;
         padding: 20px;
