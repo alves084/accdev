@@ -903,7 +903,7 @@ footer .footer{
         z-index: 99;
         background-color: #fff;
         width: 100vw;
-        top: 100px;
+        top: 140px;
         right: 0;
     }
     .menu ul {
@@ -926,7 +926,6 @@ footer .footer{
     .menu nav ul {
         flex-direction: column;
         align-items: flex-start;
-        background-color: #00688e;
         display: none;
         width: 100%;
         padding: 20px;
