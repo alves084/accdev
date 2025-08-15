@@ -1068,8 +1068,8 @@ textarea{
         margin-top: 5px;
     }
     .btn-mobile-only {
-    display: block;
-    margin-top: 15px;
+        display: block;
+        margin-top: 15px;
     }
 
     .btn-desktop-only {
@@ -1174,4 +1174,78 @@ textarea{
   .acc-footer-social a {
     margin: 0 10px;
   }
+}
+
+
+
+
+/* =======================
+   Missão, Visão e Valores
+======================= */
+.mission-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 90px;
+}
+
+.mission-card {
+    background-color: #ffffff;
+    border: 2px solid #1aaed8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card h3 {
+    color: #00688e;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #8c0b02;
+    padding-bottom: 5px;
+}
+
+.mission-card p, 
+.mission-card ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.mission-card ul {
+    padding-left: 20px;
+}
+
+.mission-card li {
+    margin-bottom: 8px;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 1024px) {
+    .mission-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    /* Faz o bloco de Valores ocupar as duas colunas */
+    .mission-card:nth-child(3) {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .mission-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .mission-card:nth-child(3) {
+        grid-column: span 1; /* volta ao padrão */
+    }
 }
