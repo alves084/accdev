@@ -262,7 +262,7 @@ nav{
 
 
 .default{
-    padding-top: 50px;
+    padding-top: 200px;
     padding-bottom: 50px;
 }
 
@@ -693,6 +693,23 @@ textarea{
 }
 .slidearea-FORM{
     width: 350px;
+}
+.sbv{
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+    color: #00688e;
+}
+.sbv2{
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+    color: #f00;
+}
+.sbv2 h2{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 .acc-footer {
@@ -1248,4 +1265,49 @@ textarea{
     .mission-card:nth-child(3) {
         grid-column: span 1; /* volta ao padrão */
     }
+}
+
+
+/* =======================
+   Historia
+======================= */
+
+.history-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 90px;
+}
+
+.history-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.history-card.full-width {
+  grid-column: span 2;
+}
+
+.history-card h3 {
+  color: #00688e;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.history-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .history-container {
+    grid-template-columns: 1fr;
+  }
+  .history-card.full-width {
+    grid-column: span 1;
+  }
 }
