@@ -265,6 +265,12 @@ nav{
     padding-top: 200px;
     padding-bottom: 50px;
 }
+.ofc{
+    padding-top: 30px;
+}
+.ofc2{
+    padding-top: 70px;
+}
 
 .default .section-title,
 .default .section-desc{
@@ -377,6 +383,7 @@ nav{
 }
 .section-aboutus--left{
     flex: 1;
+    padding: 15px;
 }
 .section-aboutus--left p{
     line-height: 27px;
