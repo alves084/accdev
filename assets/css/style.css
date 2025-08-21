@@ -1280,12 +1280,12 @@ textarea{
 ======================= */
 
 /* ================= TIMELINE ================= */
-.section-body {
+.section-bod {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.section-body p{
+.section-bod p{
     font-size: 20px;
     color: #fff;
     font-weight: 600;
