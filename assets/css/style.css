@@ -1390,11 +1390,11 @@ textarea{
   .timeline-item p {
     font-size: 0.9rem;
   }
-  .section-body {
+  .section-bod {
     gap: 60px;
     flex-direction: column;
     }
-    .section-body h2{
+    .section-bod h2{
         padding: 20px;
     }
 }
