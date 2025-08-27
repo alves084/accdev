@@ -1453,7 +1453,7 @@ textarea{
 /* Thumbnail (capa do livro) */
 .livro-thumb {
   width: 100%;
-  height: 280px;
+  height: 580px;
   overflow: hidden;
   background: #eee;
   display: flex;
@@ -1521,7 +1521,7 @@ textarea{
   }
 
   .livro-thumb {
-    height: 200px;
+    height: 580px;
   }
 }
 
@@ -1531,7 +1531,7 @@ textarea{
   }
 
   .livro-thumb {
-    height: 180px;
+    height: 580px;
   }
 
   .livro-info {
