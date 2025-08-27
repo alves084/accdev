@@ -917,7 +917,7 @@ textarea{
         width: 45px;
         margin-right: 30px;
     }
-    nav {
+    header nav {
         display: none;
         position: absolute;
         z-index: 99;
@@ -1039,7 +1039,7 @@ textarea{
         width: 45px;
         margin-right: 30px;
     }
-    nav {
+    header nav {
         display: none;
         position: absolute;
         z-index: 99;
