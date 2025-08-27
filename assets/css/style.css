@@ -1399,3 +1399,152 @@ textarea{
     }
 }
 
+
+/*biblioteca virtual*/
+
+/*Menu Categorias*/
+.menu-categorias {
+  text-align: center;
+  margin: 20px;
+  margin-top: 170px;
+}
+
+.menu-categorias button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #149dc6;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.menu-categorias button:hover {
+  background: #0d8bb3;
+}
+
+/* Container de livros */
+.livros-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card de livro */
+.livro-card {
+  
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.livro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Thumbnail (capa do livro) */
+.livro-thumb {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.livro-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Informações do livro */
+.livro-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.livro-titulo {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+  color: #077aa1; /* tom azul médio */
+}
+
+.livro-meta {
+  font-size: 0.9rem;
+  margin: 2px 0;
+  color: #444;
+}
+
+/* Botão de abrir livro */
+.livro-abrir {
+  margin-top: auto;
+  display: inline-block;
+  text-align: center;
+  background: #1aaed8; /* azul claro destaque */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.livro-abrir:hover {
+  background: #149dc6;
+}
+
+/* Arquivo indisponível */
+.livro-indisponivel {
+  margin-top: auto;
+  color: #8c0b02; /* vermelho de alerta */
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* ====== Responsividade ====== */
+@media (max-width: 768px) {
+  .livros-container {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .livro-thumb {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .livro-card {
+    border-radius: 8px;
+  }
+
+  .livro-thumb {
+    height: 180px;
+  }
+
+  .livro-info {
+    padding: 12px;
+  }
+
+  .livro-titulo {
+    font-size: 1rem;
+  }
+
+  .livro-abrir {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ACC - Aplicação Colégio e Curso</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body class="pagina-interna">
+    <!--<div id="splash-screen">
+        <div class="splash-content">
+            <button id="close-splash">✖</button>
+            <a href="#"><img src="assets/banners/CAPA-MATRICULAS-ACC.jpg" alt="Colégio ACC" /></a>
+            <p>Bem-vindo ao Colégio ACC</p>
+        </div>
+    </div>-->
+<!--<?php include("header.php"); ?>-->
+<header>
+    <div class="header">
+        <div class="logo">
+            <div class="logoimg"><a href="index.html"><img src="assets/images/cropped-MARCAS-ACC-02.png"></a></div>
+        </div>
+        <div class="menu">
+            <button class="menu-opener" aria-label="Abrir menu">&#9776;</button>
+            <nav>
+                <ul>
+                    <li>
+                        <a style="cursor: pointer;">A Escola</a>
+                        <ul class="submenu">
+                            <li><a href="historia.html">História da Escola</a></li>
+                            <li><a href="valores.html">Missão, Visão e Valores</a></li>
+                            <!--<li><a href="equipe.html">Equipe Pedagógica</a></li>
+                            <li><a href="infraestrutura.html">Infraestrutura</a></li>-->
+                        </ul>
+                    </li>
+                    <li><a href="biblioteca.html">Biblioteca Virtual</a></li>
+                    <li><a href="https://aluno.colegioacc.com.br/" target="_blank">Certificados</a></li>
+                    <!--<li class="btn-mobile-only">
+                        <a href="#matriculas" class="buttonhd">Matrículas</a>
+                    </li>-->
+                </ul>
+            </nav>
+            <!--<a href="#matriculas" class="buttonhd btn-desktop-only">Matrículas</a>-->
+        </div>
+    </div>
+</header>
+    <nav id="menu-categorias" class="menu-categorias"></nav>
+    <main>
+    <div id="livros" class="livros-container"></div>
+    <footer class="acc-footer">
+        <div class="acc-footer-container">
+            <!-- Coluna 1: Logo e texto -->
+            <div class="acc-footer-col">
+            <img src="assets/images/cropped-MARCAS-ACC-02.png" alt="Colégio ACC" class="acc-footer-logo">
+            <p>Há mais de 20 anos oferecendo uma educação de excelência, com compromisso e inovação para formar cidadãos preparados para o futuro.</p>
+            </div>
+
+            <!-- Coluna 2: Links rápidos -->
+            <div class="acc-footer-col">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="historia.html">História da Escola</a></li>
+                <li><a href="valores.html">Missão, Visão e Valores</a></li>
+                <li><a href="biblioteca.html">Biblioteca Virtual</a></li>
+                <li><a href="https://aluno.colegioacc.com.br/">Certificados</a></li>
+            </ul>
+            </div>
+
+            <!-- Coluna 3: Contato e redes -->
+            <div class="acc-footer-col">
+            <!--<h4>Contato</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Rua Coronel Antônio Marques, 67 - Escada/PE</p>
+            <p><i class="fas fa-phone"></i> (81) 3534-2034</p>
+            <p><i class="fas fa-envelope"></i> contato@colegioacc.com.br</p>-->
+            <div class="acc-footer-social">
+                <a href=""><i class="fab fa-facebook-f"><img src="assets/images/faceicon.png" width="30px" height="30px"></i></a>
+                <a href=""><i class="fab fa-instagram"><img src="assets/images/insta icon.png" width="30px" height="30px"></i></a>
+                <a href="#"><i class="fab fa-youtube"><img src="assets/images/yt icon.png" width="30px" height="30px"></i></a>
+            </div>
+            </div>
+        </div>
+
+        <div class="acc-footer-bottom">
+            <p>COPYRIGHT &copy;2025 ALL RIGHTS RESERVED - This website is made by <a href="https://wa.me/5581989285846" target="_blank" style="color: #f4f4f4; text-decoration: none;">Agência CliquePRO</a></p>
+        </div>
+    </footer>
+    </main>
+    <script src="assets/js/livros.js"></script>
+  <script>
+    function carregarMenuCategorias() {
+      const menu = document.getElementById("menu-categorias");
+      const categorias = ["todos", ...new Set(livros.map(l => l.categoria))];
+
+      categorias.forEach(cat => {
+        const btn = document.createElement("button");
+        btn.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+        btn.dataset.categoria = cat;
+        btn.addEventListener("click", () => carregarLivros(cat));
+        menu.appendChild(btn);
+      });
+    }
+
+    function carregarLivros(categoria = "todos") {
+      const container = document.getElementById("livros");
+      container.innerHTML = "";
+
+      const filtrados = categoria === "todos" ? livros : livros.filter(l => l.categoria === categoria);
+
+      filtrados.forEach(livro => {
+        const card = document.createElement("div");
+        card.className = "livro-card";
+
+        const capaSafe = livro.capa || "capas/placeholder.jpg";
+        card.innerHTML = `
+          <div class="livro-thumb">
+            <img src="${capaSafe}" alt="Capa: ${livro.titulo}" onerror="this.src='capas/placeholder.jpg'"/>
+          </div>
+          <div class="livro-info">
+            <h3 class="livro-titulo">${livro.titulo}</h3>
+            <p class="livro-meta"><strong>Autor:</strong> ${livro.autor || "—"}</p>
+            ${livro.arquivo
+              ? `<a class="livro-abrir" href="${livro.arquivo}" target="_blank" rel="noopener">📖 Abrir</a>`
+              : `<span class="livro-indisponivel">Arquivo indisponível</span>`}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      carregarMenuCategorias();
+      carregarLivros();
+    });
+  </script>
+  </body>
+</html>
