@@ -1413,8 +1413,7 @@ textarea{
   margin: 5px;
   padding: 10px 15px;
   border: none;
-  border-radius: 6px;
-  background: #149dc6;
+  background: #00313f;
   color: #fff;
   cursor: pointer;
   font-weight: bold;
@@ -1493,11 +1492,10 @@ textarea{
   margin-top: auto;
   display: inline-block;
   text-align: center;
-  background: #1aaed8; /* azul claro destaque */
+  background: #00313f; /* azul claro destaque */
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
-  border-radius: 6px;
   font-weight: bold;
   transition: background 0.3s ease;
 }
