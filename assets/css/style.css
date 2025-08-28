@@ -1412,6 +1412,7 @@ textarea{
 .menu-categorias button {
   margin: 5px;
   padding: 10px 15px;
+  text-transform: uppercase;
   border: none;
   background: #00313f;
   color: #fff;
