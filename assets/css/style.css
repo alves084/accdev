@@ -1429,7 +1429,7 @@ textarea{
 .livros-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 40px;
   padding: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -1453,7 +1453,7 @@ textarea{
 /* Thumbnail (capa do livro) */
 .livro-thumb {
   width: 100%;
-  height: 580px;
+  height: 380px;
   overflow: hidden;
   background: #eee;
   display: flex;
@@ -1476,15 +1476,16 @@ textarea{
 }
 
 .livro-titulo {
-  font-size: 1.1rem;
+  font-size: 10px;
   margin: 0 0 10px;
-  color: #077aa1; /* tom azul médio */
+  color: #ccc;
 }
 
 .livro-meta {
-  font-size: 0.9rem;
+  font-size: 10px;
   margin: 2px 0;
-  color: #444;
+  color: #292929;
+  padding-bottom: 10px;
 }
 
 /* Botão de abrir livro */
@@ -1517,34 +1518,33 @@ textarea{
 @media (max-width: 768px) {
   .livros-container {
     padding: 15px;
-    gap: 15px;
+    gap: 30px;
   }
 
   .livro-thumb {
-    height: 580px;
+    height: 300px;
   }
 }
 
 @media (max-width: 480px) {
-  .livro-card {
-    border-radius: 8px;
-  }
+    .livros-container{
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .livro-thumb {
+        height: 230px;
+    }
 
-  .livro-thumb {
-    height: 580px;
-  }
+    .livro-info {
+        padding: 12px;
+    }
 
-  .livro-info {
-    padding: 12px;
-  }
+    .livro-titulo {
+        font-size: 8px;
+    }
 
-  .livro-titulo {
-    font-size: 1rem;
-  }
-
-  .livro-abrir {
-    font-size: 0.85rem;
-    padding: 8px 12px;
-  }
+    .livro-abrir {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
 }
 
