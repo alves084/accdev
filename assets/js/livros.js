@@ -41,5 +41,47 @@ const livros = [
     capa: "assets/capas/ALICENOPAÍSDASMARAVILHAS.png",
     arquivo: "https://drive.google.com/file/d/1yAo6J7Bos8i-gwn2K7DoOiRreXYSM7qv/view?usp=sharing",
     categoria: "CONTOS"
-  }, 
+  },
+  {
+    titulo: "21 lições para o seculo 21",
+    autor: "Yuval Noah Harari",
+    capa: "assets/capas/21liçõesparaoseculo21.png",
+    arquivo: "https://drive.google.com/file/d/12CpykXryDx1-9GMPP7mUkHtxTh4IcpiE/view?usp=sharing",
+    categoria: "DESENVOLVIMENTO PESSOAL E EVOLUÇÃO"
+  },
+  {
+    titulo: "A ARTE DE LIDAR COM PESSOAS",
+    autor: "JAMIL ALBUQUERQUE",
+    capa: "assets/capas/AARTEDELIDARCOMPESSOAS.png",
+    arquivo: "https://drive.google.com/file/d/1Glk1K52xAUBM23FejvEacM-ylyCgnOVt/view?usp=sharing",
+    categoria: "DESENVOLVIMENTO PESSOAL E EVOLUÇÃO"
+  },
+  {
+    titulo: "A Arte de Pensar Claramente",
+    autor: "ROLF DOBELLI",
+    capa: "assets/capas/AArtedePensarClaramente.png",
+    arquivo: "https://drive.google.com/file/d/1Xep2gBSIecULT19Rrm93uNrsyizcEoYk/view?usp=sharing",
+    categoria: "DESENVOLVIMENTO PESSOAL E EVOLUÇÃO"
+  },
+  {
+    titulo: "A Chave Mestra",
+    autor: "CHARLES HANAEL",
+    capa: "assets/capas/AChaveMestra.png",
+    arquivo: "https://drive.google.com/file/d/1T1VKTRT6EcyT0JtSCqGg8ajlSc_5BeBn/view?usp=sharing",
+    categoria: "DESENVOLVIMENTO PESSOAL E EVOLUÇÃO"
+  },
+  {
+    titulo: "A Ciência de Ficar Rico",
+    autor: "WALLACE D. WATTLES",
+    capa: "assets/capas/ACiênciadeFicarRico.png",
+    arquivo: "https://drive.google.com/file/d/1-ztSO5AOKvoiDwYGB4xLEnEk0ddBOzio/view?usp=sharing",
+    categoria: "DESENVOLVIMENTO PESSOAL E EVOLUÇÃO"
+  },
+  {
+    titulo: "A CORAGEM DE NÃO AGRADAR",
+    autor: "ICHIRO KISHIMI E FUMITAKE KOGA",
+    capa: "assets/capas/ACORAGEMDENAOAGRADAR.png",
+    arquivo: "https://drive.google.com/file/d/1mN6aW563VFo6l0WrzGj0EeLfCa5NXvYc/view?usp=sharing",
+    categoria: "DESENVOLVIMENTO PESSOAL E EVOLUÇÃO"
+  },
 ];
