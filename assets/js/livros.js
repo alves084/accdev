@@ -84,4 +84,32 @@ const livros = [
     arquivo: "https://drive.google.com/file/d/1mN6aW563VFo6l0WrzGj0EeLfCa5NXvYc/view?usp=sharing",
     categoria: "DESENVOLVIMENTO PESSOAL E EVOLUÇÃO"
   },
+  {
+    titulo: "GUERRA DOS MASCATES",
+    autor: "JÓSE DE ALENCAR",
+    capa: "assets/capas/GUERRADOSMASCATES.png",
+    arquivo: "https://drive.google.com/file/d/1v3LVSQDRBRBejx7mvCGP4vWtz1bg6ELj/view?usp=sharing",
+    categoria: "JÓSE DE ALENCAR"
+  },
+  {
+    titulo: "O SERTANEJO",
+    autor: "JÓSE DE ALENCAR",
+    capa: "assets/capas/OSERTANEJO.png",
+    arquivo: "https://drive.google.com/file/d/16WQNiFBSMR3PhuZG42-aBQJoJrIQYg9A/view?usp=sharing",
+    categoria: "JÓSE DE ALENCAR"
+  },
+  {
+    titulo: "SENHORA",
+    autor: "JÓSE DE ALENCAR",
+    capa: "assets/capas/SENHORA.png",
+    arquivo: "https://drive.google.com/file/d/1mBrRE7Yw03ThzkQkhFe7jXRYadS-sxZs/view?usp=sharing",
+    categoria: "JÓSE DE ALENCAR"
+  },
+  {
+    titulo: "SONHOS D'OURO",
+    autor: "JÓSE DE ALENCAR",
+    capa: "assets/capas/SONHOSDOURO.png",
+    arquivo: "https://drive.google.com/file/d/1g8qaWvSbmiQ9Axs5TMFHanJ8sbpbLXm_/view?usp=sharing",
+    categoria: "JÓSE DE ALENCAR"
+  }
 ];
