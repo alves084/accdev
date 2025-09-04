@@ -111,5 +111,33 @@ const livros = [
     capa: "assets/capas/SONHOSDOURO.png",
     arquivo: "https://drive.google.com/file/d/1g8qaWvSbmiQ9Axs5TMFHanJ8sbpbLXm_/view?usp=sharing",
     categoria: "JÓSE DE ALENCAR"
+  },
+  {
+    titulo: "COXINHA DE MACAXEIRA",
+    autor: "BRUNO WAGNER",
+    capa: "assets/capas/COXINHADEMACAXEIRA.png",
+    arquivo: "https://drive.google.com/file/d/1GGlwVVX3L6fX06x_JQTGsgrhlxAMSz3H/view?usp=sharing",
+    categoria: "LEITURA DE CORDEL"
+  },
+  {
+    titulo: "NOSSOS CORDÉIS",
+    autor: "TEONES ALMEIDA SUZANO",
+    capa: "assets/capas/NOSSOSCORDEIS.png",
+    arquivo: "https://drive.google.com/file/d/1A7xY_NGfklVs2DVpwzTf1AWxtXqNeYwH/view?usp=sharing",
+    categoria: "LEITURA DE CORDEL"
+  },
+  {
+    titulo: "O CORONAVÍRUS",
+    autor: "CÍCERO CARLOS DUARTE",
+    capa: "assets/capas/OCORONAVIRUS.png",
+    arquivo: "https://drive.google.com/file/d/1lTiTayjqIIJLmTmfoxdQPubKo6U1kC2v/view?usp=sharing",
+    categoria: "LEITURA DE CORDEL"
+  },
+  {
+    titulo: "O DIA QUE O SUS VISITOU O CIDADAO",
+    autor: "LINCOLN MACÁRIO MAIA",
+    capa: "assets/capas/ODIAQUEOSUSVISITOUOCIDADAO.png",
+    arquivo: "https://drive.google.com/file/d/1upmyM-GUuFicsHP88wYMVtb3YCep0prl/view?usp=sharing",
+    categoria: "LEITURA DE CORDEL"
   }
 ];
