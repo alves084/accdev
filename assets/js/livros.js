@@ -139,5 +139,47 @@ const livros = [
     capa: "assets/capas/ODIAQUEOSUSVISITOUOCIDADAO.png",
     arquivo: "https://drive.google.com/file/d/1upmyM-GUuFicsHP88wYMVtb3YCep0prl/view?usp=sharing",
     categoria: "LEITURA DE CORDEL"
+  },
+  {
+    titulo: "4 HOMENS EM 44 CAPÍTULOS",
+    autor: "BB EASTON",
+    capa: "assets/capas/4HOMENSEM44CAPITULOS.png",
+    arquivo: "https://drive.google.com/file/d/1wJ-PAiU8Ms_bEBtKwp0EU64yECx0OyjS/view?usp=sharing",
+    categoria: "LIVROS DE FILMES E NOVELAS"
+  },
+  {
+    titulo: "A ENTREGADORA SE ENCONTRA COM O CEO",
+    autor: "",
+    capa: "assets/capas/AENTREGADORASEENCONTRACOMOCEO.png",
+    arquivo: "https://drive.google.com/file/d/1S6dCMwZU93ArOn8Et22mWOg75WREW8WX/view?usp=sharing",
+    categoria: "LIVROS DE FILMES E NOVELAS"
+  },
+  {
+    titulo: "A ESCOLHA",
+    autor: "NICHOLAS SPARKS",
+    capa: "assets/capas/AESCOLHA.png",
+    arquivo: "https://drive.google.com/file/d/15pKaSO--mDW08dsc9cUxW7M5wtj3Yr4J/view?usp=sharing",
+    categoria: "LIVROS DE FILMES E NOVELAS"
+  },
+  {
+    titulo: "A NOIVA DO CAPITÃO",
+    autor: "TESSA DARE",
+    capa: "assets/capas/ANOIVADOCAPITAO.png",
+    arquivo: "https://drive.google.com/file/d/1JAaFkbg98Kmu7YshYC-FBLxtIuawN4r2/view?usp=sharing",
+    categoria: "LIVROS DE FILMES E NOVELAS"
+  },
+  {
+    titulo: "AMOR E AZEITONAS",
+    autor: "JENNA EVANS WELCH",
+    capa: "assets/capas/AMOREAZEITONAS.png",
+    arquivo: "https://drive.google.com/file/d/13-xcKKP95bsOfCLYlyAk3Wk9LsfYCkMk/view?usp=sharing",
+    categoria: "LIVROS DE FILMES E NOVELAS"
+  },
+  {
+    titulo: "AS MIL PARTES DO MEU CORAÇÃO",
+    autor: "COLLEEN HOOVER",
+    capa: "assets/capas/ASMILPARTESDOMEUCORACAO.png",
+    arquivo: "https://drive.google.com/file/d/1QPEf8NiglQfIw-sqz7YHro1FTL36OjWn/view?usp=sharing",
+    categoria: "LIVROS DE FILMES E NOVELAS"
   }
 ];
