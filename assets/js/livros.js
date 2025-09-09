@@ -181,5 +181,47 @@ const livros = [
     capa: "assets/capas/ASMILPARTESDOMEUCORACAO.png",
     arquivo: "https://drive.google.com/file/d/1QPEf8NiglQfIw-sqz7YHro1FTL36OjWn/view?usp=sharing",
     categoria: "LIVROS DE FILMES E NOVELAS"
+  },
+  {
+    titulo: "ESAÚ E JACÓ",
+    autor: "MACHADO DE ASSIS",
+    capa: "assets/capas/ESAUEJACO.png",
+    arquivo: "https://drive.google.com/file/d/1Kx_l0J5I-wUC64Togaw-5HTTtFbGC6UR/view?usp=sharing",
+    categoria: "MACHADO DE ASSIS"
+  },
+  {
+    titulo: "HELENA",
+    autor: "MACHADO DE ASSIS",
+    capa: "assets/capas/HELENA.png",
+    arquivo: "https://drive.google.com/file/d/1kC_YPnAR8qUaabje0NEqzP0anCz67MkR/view?usp=sharing",
+    categoria: "MACHADO DE ASSIS"
+  },
+  {
+    titulo: "HISTÓRIAS DA MEIA NOITE",
+    autor: "MACHADO DE ASSIS",
+    capa: "assets/capas/HISTÓRIASDAMEIANOITE.png",
+    arquivo: "https://drive.google.com/file/d/1NNaQMUIHHvpD5tXZp7iGadqVuL9b3PZa/view?usp=sharing",
+    categoria: "MACHADO DE ASSIS"
+  },
+  {
+    titulo: "HISTÓRIAS SEM DATA",
+    autor: "MACHADO DE ASSIS",
+    capa: "assets/capas/HISTÓRIASSEMDATA.png",
+    arquivo: "https://drive.google.com/file/d/19cvD602pqvIwJsYcg4V70aWSBl_q1ARo/view?usp=sharing",
+    categoria: "MACHADO DE ASSIS"
+  },
+  {
+    titulo: "O ALIENISTA",
+    autor: "MACHADO DE ASSIS",
+    capa: "assets/capas/OALIENISTA.png",
+    arquivo: "https://drive.google.com/file/d/1UaRG4fkJnDJVUmBRbWipaCYlRlzvHu1g/view?usp=sharing",
+    categoria: "MACHADO DE ASSIS"
+  },
+  {
+    titulo: "O CASO DA VARA",
+    autor: "MACHADO DE ASSIS",
+    capa: "assets/capas/OCASODAVARA.png",
+    arquivo: "https://drive.google.com/file/d/12pvmDcFG83AqtLHWhvbd62QXhgEcap82/view?usp=sharing",
+    categoria: "MACHADO DE ASSIS"
   }
 ];
