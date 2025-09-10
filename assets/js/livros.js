@@ -223,5 +223,33 @@ const livros = [
     capa: "assets/capas/OCASODAVARA.png",
     arquivo: "https://drive.google.com/file/d/12pvmDcFG83AqtLHWhvbd62QXhgEcap82/view?usp=sharing",
     categoria: "MACHADO DE ASSIS"
+  },
+  {
+    titulo: "MARQUÊS DE RABICÓ",
+    autor: "MONTEIRO LOBATO",
+    capa: "assets/capas/MARQUESDERABICO.png",
+    arquivo: "https://drive.google.com/file/d/1p7EgdlFAexeFfmtaq5UKkacfe6nkAiVx/view?usp=sharing",
+    categoria: "MONTEIRO LOBATO"
+  },
+  {
+    titulo: "O MARAVILHOSO UNIVERSO DO SÍTIO",
+    autor: "MONTEIRO LOBATO",
+    capa: "assets/capas/OMARAVILHOSOUNIVERSODOSITIO.png",
+    arquivo: "https://drive.google.com/file/d/12BloIGrgamZjGwiLJzfVHgv8gWbroumQ/view?usp=sharing",
+    categoria: "MONTEIRO LOBATO"
+  },
+  {
+    titulo: "O RATINHO O GATO E O GALO",
+    autor: "MONTEIRO LOBATO",
+    capa: "assets/capas/ORATINHOOGATOEOGALO.png",
+    arquivo: "https://drive.google.com/file/d/1mi54IopRGvbpARfRYowEiMRwttR11ZWu/view?usp=sharing",
+    categoria: "MONTEIRO LOBATO"
+  },
+  {
+    titulo: "O SACI",
+    autor: "MONTEIRO LOBATO",
+    capa: "assets/capas/OSACI.png",
+    arquivo: "https://drive.google.com/file/d/15R4GnVihvScgelEPjmVST2I6AiLVdgX8/view?usp=sharing",
+    categoria: "MONTEIRO LOBATO"
   }
 ];
