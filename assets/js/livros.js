@@ -251,5 +251,47 @@ const livros = [
     capa: "assets/capas/OSACI.png",
     arquivo: "https://drive.google.com/file/d/15R4GnVihvScgelEPjmVST2I6AiLVdgX8/view?usp=sharing",
     categoria: "MONTEIRO LOBATO"
+  },
+  {
+    titulo: "8 JEITOS DE MUDAR O MUNDO",
+    autor: "SANDRA AYMONE",
+    capa: "assets/capas/8JEITOSDEMUDAROMUNDO.png",
+    arquivo: "https://drive.google.com/file/d/1KhgKsHQR7nI17l5Nfs5hNN8ElcaKMQfw/view?usp=sharing",
+    categoria: "PARA CRIANÇAS DE 6 A 8 ANOS"
+  },
+  {
+    titulo: "A BORBOLETA AZUL",
+    autor: "LENIRA ALMEIDA HECK",
+    capa: "assets/capas/ABORBOLETAAZUL.png",
+    arquivo: "https://drive.google.com/file/d/1JilGv79UNCPgNOPEYWIDL8aWo8V798HA/view?usp=sharing",
+    categoria: "PARA CRIANÇAS DE 6 A 8 ANOS"
+  },
+  {
+    titulo: "A BORBOLETA ROSA",
+    autor: "JANE CANECA",
+    capa: "assets/capas/ABORBOLETAROSA.png",
+    arquivo: "https://drive.google.com/file/d/1a8aPlNT-jR05e-azR_oIly3EC-lSjCg3/view?usp=sharing",
+    categoria: "PARA CRIANÇAS DE 6 A 8 ANOS"
+  },
+  {
+    titulo: "A CANÇÃO DOS PÁSSAROS",
+    autor: "ZECA BALEIRO",
+    capa: "assets/capas/ACANCAODOSPASSAROS.png",
+    arquivo: "https://drive.google.com/file/d/1-9EpilzgVG6LtL9-Teff-IqDi-XxvLt-/view?usp=sharing",
+    categoria: "PARA CRIANÇAS DE 6 A 8 ANOS"
+  },
+  {
+    titulo: "A CASA AMARELA",
+    autor: "KEYLA FERRARI",
+    capa: "assets/capas/ACASAAMARELA.png",
+    arquivo: "https://drive.google.com/file/d/1yyDb8aUmGY4hh872Wzy5ZYmhjbpSn5rQ/view?usp=sharing",
+    categoria: "PARA CRIANÇAS DE 6 A 8 ANOS"
+  },
+  {
+    titulo: "A CIGARRA E A FORMIGA",
+    autor: "ESOPO",
+    capa: "assets/capas/ACIGARRAEAFORMIGA.png",
+    arquivo: "https://drive.google.com/file/d/1Uxc0Z6mtSZpAiOXi8eZ32e1Fu_WVekID/view?usp=sharing",
+    categoria: "PARA CRIANÇAS DE 6 A 8 ANOS"
   }
 ];
