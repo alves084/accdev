@@ -1401,29 +1401,84 @@ textarea{
 
 
 /*biblioteca virtual*/
-
-/*Menu Categorias*/
-.menu-categorias {
+/* Campo de busca */
+.biblioteca-filtros {
   text-align: center;
   margin: 20px;
   margin-top: 170px;
 }
 
+.biblioteca-filtros input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+/* Layout geral */
+.biblioteca-layout {
+  display: flex;
+  max-width: 1200px;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Sidebar desktop */
+.menu-categorias {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: none;
+  padding: 15px;
+  border-radius: 6px;
+}
+
 .menu-categorias button {
-  margin: 5px;
   padding: 10px 15px;
-  text-transform: uppercase;
+  text-align: left;
   border: none;
   background: #00313f;
   color: #fff;
   cursor: pointer;
   font-weight: bold;
   transition: background 0.3s;
+  border-radius: 4px;
 }
 
 .menu-categorias button:hover {
   background: #0d8bb3;
 }
+
+/* Conteúdo */
+.biblioteca-conteudo {
+  flex: 1;
+}
+
+/* Botão toggle (só aparece no mobile) */
+.toggle-categorias {
+  display: none;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background: #00313f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.menu-categorias button:hover {
+  background: #0d8bb3;
+}
+
+/* Conteúdo ao lado */
+.biblioteca-conteudo {
+  flex: 1;
+}
+
 
 /* Container de livros */
 .livros-container {
@@ -1518,6 +1573,7 @@ textarea{
   .livros-container {
     padding: 15px;
     gap: 30px;
+    max-width: 700px;
   }
 
   .livro-thumb {
@@ -1526,6 +1582,26 @@ textarea{
 }
 
 @media (max-width: 480px) {
+    .biblioteca-layout {
+    flex-direction: column;
+  }
+
+  /* Sidebar escondida no mobile */
+  .menu-categorias {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Quando ativa */
+  .menu-categorias.active {
+    display: flex;
+  }
+
+  /* Botão aparece no mobile */
+  .toggle-categorias {
+    display: block;
+  }
     .livros-container{
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
@@ -1546,4 +1622,3 @@ textarea{
         padding: 8px 12px;
     }
 }
-

@@ -48,7 +48,25 @@
         </div>
     </div>
 </header>
-    <nav id="menu-categorias" class="menu-categorias"></nav>
+
+    <div class="biblioteca-filtros">
+      <input type="text" id="campo-busca" placeholder="Buscar por título ou autor..." />
+    </div>
+
+    <div class="biblioteca-layout">
+      <!-- Botão que só aparece no mobile -->
+      <button id="toggle-categorias" class="toggle-categorias">☰ Categorias</button>
+
+      <!-- Sidebar de categorias -->
+      <aside class="menu-categorias" id="menu-categorias"></aside>
+
+      <!-- Conteúdo dos livros -->
+      <main class="biblioteca-conteudo">
+        <div id="livros" class="livros-container"></div>
+      </main>
+    </div>
+
+
     <main>
     <div id="livros" class="livros-container"></div>
     <footer class="acc-footer">
@@ -92,50 +110,80 @@
     <script src="assets/js/layout.js"></script>
     <script src="assets/js/livros.js"></script>
   <script>
-    function carregarMenuCategorias() {
-      const menu = document.getElementById("menu-categorias");
-      const categorias = ["todos", ...new Set(livros.map(l => l.categoria))];
+  let categoriaSelecionada = "todos";
+  let termoBusca = "";
 
-      categorias.forEach(cat => {
-        const btn = document.createElement("button");
-        btn.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
-        btn.dataset.categoria = cat;
-        btn.addEventListener("click", () => carregarLivros(cat));
-        menu.appendChild(btn);
+  function carregarMenuCategorias() {
+    const menu = document.getElementById("menu-categorias");
+    const categorias = ["todos", ...new Set(livros.map(l => l.categoria))];
+    menu.innerHTML = "";
+
+    categorias.forEach(cat => {
+      const btn = document.createElement("button");
+      btn.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+      btn.dataset.categoria = cat;
+      btn.addEventListener("click", () => {
+        categoriaSelecionada = cat;
+        carregarLivros();
       });
+      menu.appendChild(btn);
+    });
+  }
+
+  function carregarLivros() {
+    const container = document.getElementById("livros");
+    container.innerHTML = "";
+
+    const filtrados = livros.filter(livro => {
+      const dentroCategoria =
+        categoriaSelecionada === "todos" || livro.categoria === categoriaSelecionada;
+      const dentroBusca =
+        livro.titulo.toLowerCase().includes(termoBusca) ||
+        livro.autor.toLowerCase().includes(termoBusca);
+      return dentroCategoria && dentroBusca;
+    });
+
+    if (filtrados.length === 0) {
+      container.innerHTML = `<p style="text-align:center;">Nenhum livro encontrado.</p>`;
+      return;
     }
 
-    function carregarLivros(categoria = "todos") {
-      const container = document.getElementById("livros");
-      container.innerHTML = "";
+    filtrados.forEach(livro => {
+      const card = document.createElement("div");
+      card.className = "livro-card";
 
-      const filtrados = categoria === "todos" ? livros : livros.filter(l => l.categoria === categoria);
+      const capaSafe = livro.capa || "capas/placeholder.jpg";
+      card.innerHTML = `
+        <div class="livro-thumb">
+          <img src="${capaSafe}" alt="Capa: ${livro.titulo}" onerror="this.src='capas/placeholder.jpg'"/>
+        </div>
+        <div class="livro-info">
+          <h3 class="livro-titulo">${livro.titulo}</h3>
+          <p class="livro-meta"><strong>Autor:</strong> ${livro.autor || "—"}</p>
+          ${livro.arquivo
+            ? `<a class="livro-abrir" href="${livro.arquivo}" target="_blank" rel="noopener">📖 Abrir</a>`
+            : `<span class="livro-indisponivel">Arquivo indisponível</span>`}
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
 
-      filtrados.forEach(livro => {
-        const card = document.createElement("div");
-        card.className = "livro-card";
+  document.addEventListener("DOMContentLoaded", () => {
+    carregarMenuCategorias();
+    carregarLivros();
 
-        const capaSafe = livro.capa || "capas/placeholder.jpg";
-        card.innerHTML = `
-          <div class="livro-thumb">
-            <img src="${capaSafe}" alt="Capa: ${livro.titulo}" onerror="this.src='capas/placeholder.jpg'"/>
-          </div>
-          <div class="livro-info">
-            <h3 class="livro-titulo">${livro.titulo}</h3>
-            <p class="livro-meta"><strong>Autor:</strong> ${livro.autor || "—"}</p>
-            ${livro.arquivo
-              ? `<a class="livro-abrir" href="${livro.arquivo}" target="_blank" rel="noopener">📖 Abrir</a>`
-              : `<span class="livro-indisponivel">Arquivo indisponível</span>`}
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      carregarMenuCategorias();
+    document.getElementById("campo-busca").addEventListener("input", e => {
+      termoBusca = e.target.value.toLowerCase();
       carregarLivros();
     });
-  </script>
+  });
+
+  // Toggle categorias no mobile
+  document.getElementById("toggle-categorias").addEventListener("click", () => {
+    document.getElementById("menu-categorias").classList.toggle("active");
+  });
+
+</script>
   </body>
 </html>
