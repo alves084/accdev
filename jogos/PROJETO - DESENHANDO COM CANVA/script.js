@@ -24,6 +24,15 @@ screen.addEventListener('touchend', touchEndEvent);
 
 document.querySelector('.clear').addEventListener('click', clearScreen);
 
+// Função para pegar posição exata dentro do canvas com escala correta
+function getCanvasPosition(x, y) {
+    let rect = screen.getBoundingClientRect();
+    return {
+        x: (x - rect.left) * (screen.width / rect.width),
+        y: (y - rect.top) * (screen.height / rect.height)
+    };
+}
+
 //Functions
 function colorClickEvent(e){
     let color = e.target.getAttribute('data-color');
@@ -33,33 +42,38 @@ function colorClickEvent(e){
     e.target.classList.add('active');
 }
 
+// Mouse
 function mouseDownEvent(e){
     canDraw = true;
-    mouseX = e.pageX - screen.offsetLeft;
-    mouseY = e.pageY - screen.offsetTop;
+    let pos = getCanvasPosition(e.clientX, e.clientY);
+    mouseX = pos.x;
+    mouseY = pos.y;
 }
 function mouseMoveEvent(e){
     if(canDraw){
-        draw(e.pageX, e.pageY);
+        let pos = getCanvasPosition(e.clientX, e.clientY);
+        draw(pos.x, pos.y);
     }
 }
 function mouseUpEvent(){
     canDraw = false;
 }
 
-// Touch functions
+// Touch
 function touchStartEvent(e){
-    e.preventDefault(); // evita scroll na tela
+    e.preventDefault(); // evita scroll
     canDraw = true;
     let touch = e.touches[0];
-    mouseX = touch.pageX - screen.offsetLeft;
-    mouseY = touch.pageY - screen.offsetTop;
+    let pos = getCanvasPosition(touch.clientX, touch.clientY);
+    mouseX = pos.x;
+    mouseY = pos.y;
 }
 function touchMoveEvent(e){
     e.preventDefault();
     if(canDraw){
         let touch = e.touches[0];
-        draw(touch.pageX, touch.pageY);
+        let pos = getCanvasPosition(touch.clientX, touch.clientY);
+        draw(pos.x, pos.y);
     }
 }
 function touchEndEvent(){
@@ -68,20 +82,17 @@ function touchEndEvent(){
 
 // Draw
 function draw(x, y){
-    let pointX = x - screen.offsetLeft;
-    let pointY = y - screen.offsetTop;
-
     ctx.beginPath();
     ctx.lineWidth = 5;
     ctx.lineJoin = "round";
     ctx.moveTo(mouseX, mouseY);
-    ctx.lineTo(pointX, pointY);
+    ctx.lineTo(x, y);
     ctx.closePath();
     ctx.strokeStyle = currentColor;
     ctx.stroke();
 
-    mouseX = pointX;
-    mouseY = pointY;
+    mouseX = x;
+    mouseY = y;
 }
 
 // Clear
