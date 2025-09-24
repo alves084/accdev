@@ -1,0 +1,58 @@
+.jogos-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.jogos-section h1 {
+  margin-bottom: 30px;
+  color: #00313f; /* azul escuro da escola */
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 150px;
+}
+
+.jogos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.jogo-card {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.jogo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.jogo-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.jogo-card h3 {
+  margin: 15px 0;
+  color: #00313f;
+  font-size: 1rem;
+}
+
+.jogo-play {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #00313f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.jogo-play:hover {
+  background: #0d8bb3;
+}
